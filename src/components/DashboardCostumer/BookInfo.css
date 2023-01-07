@@ -1,0 +1,75 @@
+.booka{
+    position: relative;
+    top:70px;
+    right: 430px;
+    border-radius: 18px;
+    
+}
+.t{
+    position: relative;
+    top:80px;
+}
+.tt{
+    position: relative;
+    top:70px;
+}
+.rating{
+    position: relative;
+    right: 200px;
+    bottom:250px
+}
+.rating i{
+    font-size: xx-large;
+    color:aliceblue;
+   
+}
+.rating .active{
+   color:#c87400;
+}
+.rating i:hover{
+    color:aliceblue;
+}
+.description{
+    position: relative;
+    left:650px;
+    bottom:250px;
+    width: 400px;
+    z-index: 1;
+}
+.isbn{
+    position: relative;
+    right: 30px;
+    bottom: 50px;
+}
+.price{
+    position: relative;
+    right: 200px; 
+    bottom:100px;
+  text-decoration: underline;
+  font-weight: 600;
+   
+}
+.availble{
+    position: relative;
+    left: 120px;
+    bottom: 120px;
+    
+    
+}
+.langue{
+    position: relative;
+    left: 300px;
+    bottom: 193px;
+
+}
+.borrow{
+    border:none;
+    position: relative;
+    top:300px;
+    right:400px;
+    padding: 5px 20px;
+
+}
+.borrow:hover{
+    letter-spacing: 1px;
+}

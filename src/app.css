@@ -1,0 +1,487 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  scroll-behavior: smooth;
+  
+}
+/* table style Begin */
+table {
+  border-collapse: collapse;
+	border:1px solid #EEEEEE;
+  text-align: center;
+  position: relative;
+  top:60px;
+ 
+  
+}
+table, table:before, table:after {
+  box-sizing:border-box;
+}
+th {
+	
+	background:#000;
+  color: #f0f0f0;
+  text-transform:uppercase;
+}
+tr{
+  background-color:#EEEEEE ;
+  height: 40px;
+}
+
+td,
+tr,
+th {
+  border: 1px solid #fff;
+}
+/* table style End */
+
+/* alse */
+
+
+/* centering component  */
+.home,
+.Users,
+.books
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* centering component End */
+
+/* button Afficher users style */
+ /* Begin */
+  .All {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    top:49px;
+    left:20%;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    
+    
+  }
+  
+  .All::after,
+  .All::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+    
+    
+  }
+  
+  .All::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+    
+  }
+  
+  .All::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+    
+  }
+  
+  .All:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+    
+    
+  }
+  
+  .All:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+   
+    
+  }
+  
+  .All:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+    
+  }
+  /* End */
+
+/* button Delete stagiaires style */
+/* Begin */
+.Del {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 25px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+  display: inline-table;
+  
+}
+
+.Del:hover {
+  background: #F6F9FE;
+  color: #060b26;
+}
+
+.Del:active {
+  outline: none;
+  border: 2px solid #060b26;
+}
+
+.Del:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.Del:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.Del:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.Del:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+/* End */
+/* hide button */
+
+  #HideAll {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    left:70%;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    
+    
+  }
+  
+  #HideAll::after,
+  #HideAll::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+  }
+  
+  #HideAll::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+  }
+  
+  #HideAll::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  #HideAll:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  #HideAll:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  #HideAll:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+  /* End */
+
+label{
+  font-size: 20px;
+}
+/*Seach by filiere btn  */
+/* Begin */
+
+
+/* CSS */
+.Search {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: absolute;
+  left:90%;
+  top:20%;
+}
+
+.Search:hover,
+.Search:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.Search:active {
+  background: var(--color);
+  color: #fff;
+}
+.chercher{
+  text-decoration: none;
+  color: #000;
+  font-size: 19px;
+}
+.chercher:hover{
+  color:#373B44
+}
+/* End */
+/* Ajouter stagiaire style CSS */
+.inpt{
+ margin: 10px;
+
+}
+fieldset{
+  border: 1px dotted #000;
+  width: max-content;
+}
+
+ 
+
+/* BTN CSS */
+.add{
+  background: #fff;
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  box-sizing: border-box;
+  color: #212121;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  padding: .875rem 1.125rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.add:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.add:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.add:focus {
+  outline: 0 solid transparent;
+}
+
+.add:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.add:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.add:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+.add:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+/* btn css */
+/* Ajouter stagiaire style CSS */
+/* seach by usertype table style */
+.result{
+  position:fixed;
+  top:50%;
+  left: 20%;
+}
+
+
+/* add user button */
+#adduser{
+ margin-top:30%;
+ margin-left: 3%;
+
+
+ 
+  
+}
+/* add user button */
+#getback{
+  text-decoration: none;
+  color: #000;
+  font-size: large;
+  font-weight: bolder;
+  border: #212121 2px dotted;
+  margin-left: 60%;
+ 
+  
+}
+.UpdateUser{
+  text-decoration: none;
+  color: #212121;
+  
+
+}
+.UpdateUser:hover ,.UpdateUser:focus{
+  color:blueviolet;
+}
+.boko{
+ margin-top: 40px;
+padding-left:12%;
+ width: 70%;
+ height: 70vh;
+border:2px dashed black;
+z-index: 0;
+}
+/* 
+
+*/
+.view:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.view:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+.view{
+  border: none;
+  border-radius: 18px;
+  background-color: #0c3f618a;
+  padding: 5px 10px;
+}
+.PLUS{
+  color:#000;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  top:10%;
+  left: 40%;
+}
+.tb{
+  position: inherit;
+}
+.search {
+  padding: 10px;
+  font-size: 20px;
+  margin: 50px;
+
+  
+}
+.radio{
+  position: relative;
+  right: 40%;
+  top: 150px;;
+}
